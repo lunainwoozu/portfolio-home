@@ -1,0 +1,289 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUNA PORTFOLIO</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,1,0">
+  <script src="http://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+  <header>
+      <span class="pagetitle">HYUNSEO(a.k.a LUNA)</span>
+  </header>
+  <main id="wrap">
+    <ul class="icons">
+      <li><button class="i1" onclick="openWindow(1)"><img src="resources/playlist.png" alt="">playlist</button></li>
+      <li><button class="i2" onclick="openWindow(2)"><img src="resources/profile.png" alt="">profile</button></li>
+      <li><button class="i3" onclick="openWindow(3)"><img src="resources/business.png" alt="">business</button></li>
+      <li><button class="i4" onclick="openWindow(4)"><img src="resources/personal.png" alt="">personal</button></li>
+    </ul>
+    <div id="playlist" class="window playlist w1">
+      <div class="title">
+          <h2>Now Playing</h2>
+          <button class="closebtn">x</button>
+      </div>
+      <div class="article">
+        <div id="player"></div>
+        <div class="song-info">
+          <!-- <h4>Song title</h4>
+          <p>Artist</p> -->
+        </div>
+        <!-- <div class="progress-bar"></div> -->
+        <div class="playtime">
+          <span class="current-time"></span> / <span class="duration"></span>
+        </div>
+        <div class="playset">
+          <button class="prev">skip_previous</button>
+          <button class="play_pause">play_pause</button>
+          <button class="next">skip_next</button>
+        </div>
+      </div>
+    </div>
+    <div class="window profile w2">
+      <div class="title">
+        <h2>HYUNSEO'S PROFILE</h2>
+        <button class="closebtn">x</button>
+      </div>
+      <div class="article">
+        <div class="flex">
+          <!-- <div class="profile-img">이미지</div> -->
+        <div class="profile-sub">
+          <ul>
+            <li><b>Career</b></li>
+            <li>- 2019.06 UI/UX 반응형 웹디자인&퍼블리싱 과정 수료</li>
+            <li>- 2021.01-2022.02 (주)에스비씨산업 웹디자인/퍼블리싱</li>
+            <li>- 2022.03-2024.04 (주)소명소프트 웹디자인/퍼블리싱</li>
+          </ul>
+          <ul>
+            <li><b>Certifications</b></li>
+            <li>- 2018.10 GTQ 그래픽기술자격 1급</li>
+            <li>- 2019.06 웹디자인기능사</li>
+          </ul>
+        </div>
+        </div>
+        <ul>
+              <li><b>Skills</b></li>
+              <ul class="circle-wrap">
+                    <li>
+                      <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="circle-border" r="20" cx="30" cy="30"></circle>
+                        <circle class="circle-progress" r="20" cx="30" cy="30"></circle>
+                        <text x="20" y="35" font-size="12px">95%</text>
+                      </svg>
+                      <p>HTML</p>           
+                    </li>
+                    <li>
+                      <svg width="60" height="60" class="svg">
+                        <circle r="20" cx="30" cy="30" class="circle-border"></circle>
+                        <circle r="20" cx="30" cy="30" class="circle-progress"></circle>
+                        <text x="20" y="35" font-size="12px">95%</text>
+                      </svg>
+                      <p>CSS</p> 
+                    </li>
+                    <li>
+                      <svg width="60" height="60" class="svg">
+                        <circle r="20" cx="30" cy="30" class="circle-border"></circle>
+                        <circle r="20" cx="30" cy="30" class="circle-progress"></circle>
+                        <text x="20" y="35" font-size="12px">90%</text>
+                      </svg>
+                      <p>JS/Jquery</p> 
+                    </li>
+                    <li>
+                      <svg width="60" height="60" class="svg">
+                        <circle r="20" cx="30" cy="30" class="circle-border"></circle>
+                        <circle r="20" cx="30" cy="30" class="circle-progress"></circle>
+                        <text x="20" y="35" font-size="12px">95%</text>
+                      </svg>
+                      <p>Ps</p> 
+                    </li>
+                    <li>
+                      <svg width="60" height="60" class="svg">
+                        <circle r="20" cx="30" cy="30" class="circle-border"></circle>
+                        <circle r="20" cx="30" cy="30" class="circle-progress"></circle>
+                        <text x="20" y="35" font-size="12px">90%</text>
+                      </svg>
+                      <p>Figma</p> 
+                    </li>
+                    <li>
+                      <svg width="60" height="60" class="svg">
+                        <circle r="20" cx="30" cy="30" class="circle-border"></circle>
+                        <circle r="20" cx="30" cy="30" class="circle-progress"></circle>
+                        <text x="20" y="35" font-size="12px">80%</text>
+                      </svg>
+                      <p>Ai</p> 
+                    </li>
+              </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="window portfolio w3">
+      <div class="title">
+          <h2>BUSINESS PROJECT</h2>
+          <button class="closebtn">x</button>
+      </div>
+        <div class="article">
+          <div class="category">
+            <h3>WEB</h3>
+            <i></i>
+          </div>
+          <ul class="list">
+            <li class="project">
+              <ul class="part">
+                <li><b>경기도자미술관 웹페이지</b></li>
+                <li>- 2022.05</li>
+                <li>- 디자인, 퍼블리싱(반응형)</li>
+                <li>- VScode, Figma</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a>
+                  <a href="https://www.gmocca.org/?isMain=true" target="_blank">homepage ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>한국영상자료원 홈페이지 통합 유지보수</b></li>
+                <li>- 2022.05, 2023.05</li>
+                <li>- 유지 보수 및 디자인 수정</li>
+                <li>- EditPlus/Figma</li>
+                <li>- html, css, javascript</li>
+                <li><a href="https://www.koreafilm.or.kr/main" target="_blank">homepage ></a></li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>시청자 권익 관련 통합 정보플랫폼(미디인)</b></li>
+                <li>- 2022.08, 2023.03</li>
+                <li>- 디자인, 퍼블리싱(반응형), 유지 보수 및 디자인 수정</li>
+                <li>- IntelliJ, Figma, Photoshop</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href=https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1"" target="_blank">design ></a>
+                  <a href="https://www.mediin.or.kr/" target="_blank">homepage ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>노원구청 메인 홈페이지 및 노원구청장 홈페이지</b></li>
+                <li>- 2023.01</li>
+                <li>- 디자인, 퍼블리싱(반응형), 유지 보수</li>
+                <li>- IntelliJ, Figma, Photoshop</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a>
+                  <a href="https://www.nowon.kr/www/index.do" target="_blank">homepage ></a>
+                  <a href="https://www.nowon.kr/mayor/index.do" target="_blank">homepage 2 ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>노원청년포탈 홈페이지</b></li>
+                <li>- 2023.12</li>
+                <li>- 메인 페이지 디자인</li>
+                <li>- IntelliJ, Figma, Photoshop</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a>
+                  <!-- <a href="" target="_blank">homepage ></a> -->
+                </li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>"이루자고" 랜딩페이지</b></li>
+                <li>- 2024.01</li>
+                <li>- 디자인, 퍼블리싱(반응형)</li>
+                <li>- IntelliJ, Figma, Photoshop</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a>
+                  <!-- <a href="" target="_blank">homepage ></a> -->
+                </li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>경상북도교육청 챗봇</b></li>
+                <li>- 2024.02</li>
+                <li>- UI/UX 디자인, 퍼블리싱</li>
+                <li>- EditPlus, Figma</li>
+                <li>- html, css, javascript</li>
+                <li>
+                  <a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=0-1&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a>
+                  <a href="https://gchat.gbe.kr/gnbot" target="_blank">homepage ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="category">
+            <h3>ETC</h3>
+            <i></i>
+          </div>
+          <ul class="list">
+            <li class="project">
+              <ul class="part">
+                <li><b>자체 앱 “이루자고”</b></li>
+                <li>- 2022.03</li>
+                <li>- 디자인, 퍼블리싱</li>
+                <li>- Android Studio, Figma</li>
+                <li>- Flutter</li>
+                <li><a href="https://www.figma.com/design/oAIgvt6rEQ5KwweQiyJ2Xw/design?node-id=1-8815&t=JdvcrO223o4RoJ0y-1" target="_blank">design ></a></li>
+              </ul>
+            </li>
+            <li class="project">
+              <ul class="part">
+                <li><b>노원청년데이터 관련 동영상 제작</b></li>
+                <li>- 2024.03</li>
+                <li>- 캐릭터 수정 및 동영상 편집</li>
+                <li style="margin-top: 0;">- Photoshop, After Effects</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="window portfolio w4">
+      <div class="title ui-draggable-handle">
+          <h2>PERSONAL PROJECT</h2>
+          <button class="closebtn">x</button>
+      </div>
+      <div class="article">
+        <ul class="list">
+          <li class="project">
+            <ul class="part">
+              <li><b>Mojitobar in ocean</b></li>
+              <li>- 디자인, 퍼블리싱(반응형)</li>
+              <li>- Photoshop, VScode</li>
+              <li>- html, css, javascript</li>
+              <li>- 모히또의 탄산에서 아이디어를 얻어 배경에 연속하여 거품이 떠오르는 것으로 시원한 분위기 연출</li>
+              <li><a href="https://lunainwoozu.github.io/portfolio/" target="_blank">homepage ></a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <ul class="part">
+              <li><b>Marshall</b></li>
+              <li>- 디자인, 퍼블리싱(반응형)</li>
+              <li>- Photoshop, VScode</li>
+              <li>- html, css, javascript</li>
+              <li>- 현재 마샬의 홈페이지가 제품 구매가 직결되는 방향이 아닌 점에서 리디자인의 방향을 착안,
+                  직접 온라인 구매가 가능한 형식으로 디자인 및 퍼블리싱</li>
+                  <li><a href="https://lunainwoozu.github.io/portfolio2/" target="_blank">homepage ></a></li>
+            </ul>
+          </li>
+        </div>
+        </ul>
+    </div>
+</main>
+<script src="script/player.js"></script>
+<script src="script/script.js"></script>
+<!-- <script src="https://unpkg.com/react@18/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/react-dom/umd/react-dom.development.js"></script> -->
+<!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+</body>
+</html>
