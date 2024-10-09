@@ -16,7 +16,8 @@ const musicList = [
 	{ title: 'Poéme in F-sharp major Op. 32, No. 1', artist: 'Alexander scriabin' }
 ]
 
-var list_index = 0;
+let list_index = 0;
+let player;
 
 function onYouTubePlayerAPIReady() {
   player = new YT.Player('player', {
@@ -38,7 +39,7 @@ function onYouTubePlayerAPIReady() {
   });
 
   function onPlayerError(event) {
-    console.error("YouTube Player Error: ", event.data);
+    console.error("Player Error: ", event.data);
     info.innerHTML = `<h4>Sorry, something went wrong.<br/>Try again please.</h4>`;
   }
 
@@ -69,6 +70,11 @@ function onYouTubePlayerAPIReady() {
         <h4>${musicList[list_index].title}</h4>
         <p>${musicList[list_index].artist}</p>`;
     }
+    if (player.getPlayerState() == 3 || player.getPlayerState() == 5){
+      info.innerHTML = `
+        <h4>Sorry, something went wrong.</h4>
+        <p>Try again please.</p>`;
+    }
   }
 
   function initialize(){
@@ -88,15 +94,6 @@ function onYouTubePlayerAPIReady() {
     }, 1000)
   
   }
-
-  // $('.progress-bar').on('mouseup touchend', function (e) {
-  //   // Calculate the new time for the video.
-  //   // new time in seconds = total duration in seconds * ( value of range input / 100 )
-  //   var newTime = player.getDuration() * (e.target.value / 100);
-  
-  //   // Skip video to new time.
-  //   player.seekTo(newTime);
-  // });
 
   function onPlayerStateChange(event) {
     var currentIndex = event.target.getPlaylistIndex();
