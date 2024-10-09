@@ -132,9 +132,3 @@ function onYouTubePlayerAPIReady() {
 });
 
 };
-
-$(document).ready(function() {
-  $.getScript("https://www.youtube.com/iframe_api", function() {
-    onYouTubePlayerAPIReady();
-  });
-});
