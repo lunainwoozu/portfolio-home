@@ -69,7 +69,7 @@ function onYouTubePlayerAPIReady() {
         <h4>${musicList[list_index].title}</h4>
         <p>${musicList[list_index].artist}</p>`;
     }
-    if (player.getPlayerState() == 3 ){
+    if (player.getPlayerState() == -1 || player.getPlayerState() == 3){
       info.innerHTML = `
         <h4>Sorry, I'm late.</h4>
         <p>You'd better click next song button.</p>`;
