@@ -16,7 +16,6 @@ const musicList = [
 	{ title: 'Poéme in F-sharp major Op. 32, No. 1', artist: 'Alexander scriabin' }
 ]
 
-let player;
 var list_index = 0;
 
 function onYouTubePlayerAPIReady() {
