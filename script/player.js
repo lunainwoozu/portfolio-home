@@ -4,7 +4,6 @@
 const key = "AIzaSyDHzuIgyYyL8xh1ySnjZxVK8u5lIOz2p40";
 const playlistId = "PLYecEw7qru4nki9MfC9Ul1pozxb_Ysw6o";
 const info = document.querySelector(".playlist .article .song-info");
-// const cd = document.querySelector(".playlist .article .cd");
 
 //music 객체 배열로 지정
 const musicList = [
@@ -70,7 +69,11 @@ function onYouTubePlayerAPIReady() {
         <h4>${musicList[list_index].title}</h4>
         <p>${musicList[list_index].artist}</p>`;
     }
-    if (player.getPlayerState() == 3 || player.getPlayerState() == 5){
+    if (player.getPlayerState() == 3 ){
+      info.innerHTML = `
+        <h4>Sorry, I'm late.</h4>
+        <p>You'd better click next song button.</p>`;
+    } else if (player.getPlayerState() == 5){
       info.innerHTML = `
         <h4>Sorry, something went wrong.</h4>
         <p>Try again please.</p>`;
