@@ -4,6 +4,7 @@
 const key = "AIzaSyDHzuIgyYyL8xh1ySnjZxVK8u5lIOz2p40";
 const playlistId = "PLYecEw7qru4nki9MfC9Ul1pozxb_Ysw6o";
 const info = document.querySelector(".playlist .article .song-info");
+// const cd = document.querySelector(".playlist .article .cd");
 
 //music 객체 배열로 지정
 const musicList = [
@@ -19,26 +20,23 @@ let player;
 var list_index = 0;
 
 function onYouTubePlayerAPIReady() {
-  window.YT.ready(function(){
-    player = new window.YT.Player('player', {
-      height: '100',
-      width: '100%',
-      playerVars: 
-        {
-          listType:'playlist',
-          list: playlistId,
-          index: 0,
-          autoplay: 1,
-          loop: 1,
-        },
-      events: {
-        'onReady': initialize,
-        'onError': onPlayerError,
-        'onStateChange': onPlayerStateChange,
-      }
-    });
-  })
-  
+  player = new YT.Player('player', {
+    height: '100',
+    width: '100%',
+    playerVars: 
+      {
+        listType:'playlist',
+        list: playlistId,
+        index: 0,
+        autoplay: 1,
+        loop: 1,
+      },
+    events: {
+      'onReady': initialize,
+      'onError': onPlayerError,
+      'onStateChange': onPlayerStateChange,
+    }
+  });
 
   function onPlayerError(event) {
     console.error("YouTube Player Error: ", event.data);
@@ -132,3 +130,5 @@ function onYouTubePlayerAPIReady() {
 });
 
 };
+
+onYouTubePlayerAPIReady();
