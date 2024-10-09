@@ -64,7 +64,7 @@ function onYouTubePlayerAPIReady() {
   }
 
   function songInfo(){
-    if (musicList.length > 0) {
+    if (player.getPlayerState() == 1 && musicList.length > 0) {
       info.innerHTML = `
         <h4>${musicList[list_index].title}</h4>
         <p>${musicList[list_index].artist}</p>`;
