@@ -4,7 +4,6 @@
 const key = "AIzaSyDHzuIgyYyL8xh1ySnjZxVK8u5lIOz2p40";
 const playlistId = "PLYecEw7qru4nki9MfC9Ul1pozxb_Ysw6o";
 const info = document.querySelector(".playlist .article .song-info");
-// const cd = document.querySelector(".playlist .article .cd");
 
 //music 객체 배열로 지정
 const musicList = [
@@ -20,23 +19,26 @@ let player;
 var list_index = 0;
 
 function onYouTubePlayerAPIReady() {
-  player = new YT.Player('player', {
-    height: '100',
-    width: '100%',
-    playerVars: 
-      {
-        listType:'playlist',
-        list: playlistId,
-        index: 0,
-        autoplay: 1,
-        loop: 1,
-      },
-    events: {
-      'onReady': initialize,
-      'onError': onPlayerError,
-      'onStateChange': onPlayerStateChange,
-    }
-  });
+  window.YT.ready(function(){
+    player = new window.YT.Player('player', {
+      height: '100',
+      width: '100%',
+      playerVars: 
+        {
+          listType:'playlist',
+          list: playlistId,
+          index: 0,
+          autoplay: 1,
+          loop: 1,
+        },
+      events: {
+        'onReady': initialize,
+        'onError': onPlayerError,
+        'onStateChange': onPlayerStateChange,
+      }
+    });
+  })
+  
 
   function onPlayerError(event) {
     console.error("YouTube Player Error: ", event.data);
@@ -131,28 +133,8 @@ function onYouTubePlayerAPIReady() {
 
 };
 
-onYouTubePlayerAPIReady();
-
-// fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistId}&key=${key}`)
-// 	.then(res => res.json())
-//     .then((data) => {
-// 		console.log(data);
-//     let i = data.items.snippet.position;
-//     console.log(i);
-//     info.innerHTML = `
-//     <h4>${musicList[i].title}</h4>
-//     <p>${musicList[i].artist}</p>`;
-//     // data.items.forEach(vod => {
-//     // });
-// 	}).catch(err => {
-//         console.log(err);
-//         info.innerHTML = `<h4>Sorry, something went wrong.<br/>Try again please.</h4>`
-//     });
-
-
-
-  // function onPlayerReady(event) {
-  //   // first shuffle play list 
-  //  player.setShuffle(true);
-  //  player.playVideoAt(0);
-  // };
+$(document).ready(function() {
+  $.getScript("https://www.youtube.com/iframe_api", function() {
+    onYouTubePlayerAPIReady();
+  });
+});
