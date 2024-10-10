@@ -297,7 +297,6 @@ header{
         flex-direction: column;
         width: 100%;
         box-sizing: border-box;
-        padding-bottom: 20px;
     }
     #wrap>*{
         top: auto;
@@ -311,6 +310,9 @@ header{
         width: auto !important;
         height: auto !important;
         inset: auto !important;
+    }
+    .window:last-child{
+        padding-bottom: 20px;
     }
     .window .article{
         max-height: none;
