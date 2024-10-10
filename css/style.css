@@ -108,6 +108,9 @@ header{
 .playlist .song-info h4{
     font-size: 11.5px;
 }
+.playlist .song-info p{
+    font-size: 10px;
+}
 .playlist .playtime{
     /* display: flex;
     justify-content: space-between; */

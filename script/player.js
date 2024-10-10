@@ -70,7 +70,7 @@ function onYouTubePlayerAPIReady() {
     if (player.getPlayerState() == -1){
       info.innerHTML = `
         <h4>Sorry, I'm late.</h4>
-        <p style="font-size: 10px;">You'd better click next song button.</p>`;
+        <p>You'd better click any button.</p>`;
     } else if (player.getPlayerState() == 5){
       info.innerHTML = `
         <h4>Sorry, something went wrong.</h4>
