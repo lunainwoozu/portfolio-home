@@ -313,7 +313,7 @@ header{
         inset: auto !important;
     }
     .window .article{
-        max-height: 100%;
+        max-height: auto;
         overflow-y: none;
     }
     .profile .circle-wrap{
