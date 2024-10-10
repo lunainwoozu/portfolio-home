@@ -313,8 +313,8 @@ header{
         inset: auto !important;
     }
     .window .article{
-        max-height: auto;
-        overflow-y: none;
+        max-height: none;
+        overflow-y: auto;
     }
     .profile .circle-wrap{
         justify-content: space-between;
@@ -347,5 +347,8 @@ header{
     }
     .portfolio .article .list .project li:last-child{
         margin-top: 6px;
+    }
+    .portfolio .article .list .project a:nth-child(3){
+        margin-top: 4px;
     }
 }
