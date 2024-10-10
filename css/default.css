@@ -42,7 +42,7 @@ a{text-decoration: none; color: inherit;}
 img{max-width:100%; height:auto; vertical-align: bottom;}
 address,em{font-style: normal;}
 table{border-collapse: collapse;}
-button{border: none; background: transparent; font-family: 'pixolde', sans-serif;}
+button{border: none; color: #000; background: transparent; font-family: 'pixolde', sans-serif;}
 input,select{vertical-align: middle; border: none;}
 
 .sr-only {
