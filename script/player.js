@@ -7,8 +7,7 @@ const info = document.querySelector(".playlist .article .song-info");
 
 //music 객체 배열로 지정
 const musicList = [
-	{ title: '봐', artist: 'Red Velvet' },
-	{ title: 'Summer', artist: 'The volunteers' },
+	{ title: 'Under control', artist: 'The internet' },
 	{ title: 'Rawww', artist: '유라' },
 	{ title: 'Poéme in F-sharp major Op. 32, No. 1', artist: 'Alexander scriabin' }
 ]
