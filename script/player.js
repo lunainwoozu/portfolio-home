@@ -3,7 +3,7 @@
 //youtube
 const key = "AIzaSyDHzuIgyYyL8xh1ySnjZxVK8u5lIOz2p40";
 const playlistId = "PLYecEw7qru4nki9MfC9Ul1pozxb_Ysw6o";
-const info = document.querySelector(".playlist .article .song-info");
+const info = document.querySelector(".playlist .content .song-info");
 
 //music 객체 배열로 지정
 const musicList = [
