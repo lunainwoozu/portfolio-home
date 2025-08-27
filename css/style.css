@@ -6,6 +6,7 @@
     min-height: 100svh;
     max-height: 100lvh;
     scrollbar-width: none;
+    line-height: 1.5;
 }
 .closed{
     display: none;
@@ -71,8 +72,8 @@ header{
   border-radius: 6px 6px 0 0;
 }
 .window .title{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   padding: 4px 6px;
   border-bottom: 1px solid black;
   border-radius: 10px 10px 0 0;
@@ -117,8 +118,6 @@ header{
     font-size: 10px;
 }
 .playlist .playtime{
-    /* display: flex;
-    justify-content: space-between; */
     font-size: 10px;
 }
 .playset{
@@ -145,98 +144,29 @@ header{
     top: 2.5%;
     left: 25%;
 }
-/* .profile .content{
-    display: flex;
-    justify-content: space-between;
-}
-.profile .content div{
-    width: 48%;
-} */
 .profile .content ul+ul{
     margin-top: 10px;
 }
-.profile .circle-wrap{
+.profile .skills{
     display: flex;
     flex-wrap: wrap;
-}
-.profile .circle-wrap p{
-    font-size: 9px;
-    text-align: center;
-}
-.profile .circle-wrap .svg {
-    display: block;
-    margin: calc(50% - 30px) auto;
-}
-.profile .circle-wrap .circle-border {
-    fill: none;
-    stroke: gray;
-    stroke-width: 3;
-    opacity: 0.3;
-}
-.profile .circle-wrap .circle-progress {
-    fill:none;
-    stroke: black;
-    stroke-width: 3;
-    stroke-dasharray: 125.6;
-    stroke-dashoffset: 125.6;
-    -webkit-animation: pc95 4s;
-    animation: pc95 4s;
-    animation-fill-mode:both;
-    -webkit-animation-fill-mode:both;
-    transform-origin: center;
-    transform: rotate(-90deg);
-}
-.profile .circle-wrap li:nth-child(3) .circle-progress,.profile .circle-wrap li:nth-child(5) .circle-progress{
-    -webkit-animation: pc90 4s;
-    animation: pc90 4s;
-    animation-fill-mode:both;
-    -webkit-animation-fill-mode:both;
-}
-.profile .circle-wrap li:last-child .circle-progress{
-    -webkit-animation: pc80 4s;
-    animation: pc80 4s;
-    animation-fill-mode:both;
-    -webkit-animation-fill-mode:both;
-}
-@-webkit-keyframes pc95 {
-    100% {
-        stroke-dashoffset: 8;
-    }
-}
-@keyframes pc95 {
-    100% {
-        stroke-dashoffset: 8;
-    }
-}
-@-webkit-keyframes pc90 {
-    100% {
-        stroke-dashoffset: 15;
-    }
-}
-@keyframes pc90 {
-    100% {
-        stroke-dashoffset: 15;
-    }
-}
-@-webkit-keyframes pc80 {
-    100% {
-        stroke-dashoffset: 20;
-    }
-}
-@keyframes pc80 {
-    100% {
-        stroke-dashoffset: 20;
-    }
+    gap: 4px;
 }
 
 /* portfolio */
-.portfolio{
-    top: 15%;
-    left: 50%;
+.w3{
+    top: 20%;
+    left: 40%;
 }
-.portfolio:last-child{
+.w4{
+    top: 35%;
+    left: 50%;
+    z-index: 99;
+}
+.w5{
     top: 45%;
     left: 1%;
+    z-index: 98;
 }
 .portfolio .content .category{
     width: 100%;
@@ -263,10 +193,8 @@ header{
     flex-wrap: wrap;
 }
 .portfolio .content .list .project{
-    /* flex-grow: 1; */
     width: 45%;
     margin-top: 30px;
-    line-height: 1.5;
 }
 .portfolio .content .list .project:first-child,
 .portfolio .content .list .project:nth-child(2){
@@ -280,9 +208,9 @@ header{
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.portfolio:last-child .content .list .project{
+/* .portfolio:last-child .content .list .project{
     margin-top: 0;
-}
+} */
 .portfolio .content .list .project a{
     padding: 5px 14px;
     margin-right: 10px;
@@ -322,9 +250,6 @@ header{
     .window .content{
         max-height: none;
         overflow-y: auto;
-    }
-    .profile .circle-wrap{
-        justify-content: space-between;
     }
     .portfolio .content .list .project{
         width: 100%;
