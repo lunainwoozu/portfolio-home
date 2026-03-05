@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="scheme-only-light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/ampersand.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HYUNSEO's Planet</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+    <script>
+      (function () {
+        try {
+          if (location.pathname.includes("//")) {
+            var normalized = location.pathname.replace(/\/{2,}/g, "/");
+            location.replace(normalized + location.search + location.hash);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
