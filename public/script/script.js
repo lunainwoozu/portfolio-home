@@ -34,11 +34,6 @@ $(window).resize(function () {
         idx++;
       });
 
-    // $('.playlist').addClass('window');
-    // if($('.playlist').hasClass('window')){
-    //   return;
-    // }
-
     $(".closebtn").click(function () {
       $(this).closest(".window").addClass("closed");
     });

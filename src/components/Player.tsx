@@ -1,5 +1,5 @@
 import React from "react";
-import Window from "../components";
+import Window from "../components/Window";
 
 const Player = () => {
   const key = "AIzaSyDHzuIgyYyL8xh1ySnjZxVK8u5lIOz2p40";
@@ -132,7 +132,7 @@ const Player = () => {
   });
 
   onYouTubePlayerAPIReady();
-  
+
   return (
     <Window title="NOW PLAYING..." content={} />
   )
