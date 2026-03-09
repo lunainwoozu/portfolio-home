@@ -1,6 +1,8 @@
 import React from 'react';
+import {useWindowStore} from "../store/windowManagerStore";
 
-const Menu = ({openWindow}: {openWindow: (num: number) => void}) => {
+const Menu = () => {
+  const { openWindow } = useWindowStore();
   return (
     <ul className="icons">
       <li><button className="i1" onClick={() => openWindow(1)}><img src="../../public/resources/playlist.png" alt="playlist" /></button></li>

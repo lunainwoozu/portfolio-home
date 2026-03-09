@@ -1,12 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import Draggable from 'react-draggable';
-import {useWindowManager} from "../hooks/useWindowManager";
+import {useWindowStore} from "../store/windowManagerStore";
 
 
 const Window = () => {
-  const { windows, isMobile, openWindow, closeWindow, bringToFront } = useWindowManager([1, 2]);
+  const { windows, isMobile, closeWindow, bringToFront } = useWindowStore();
 
   return (
+    <>
     {windows.map((win) => (
         <Draggable
           key={win.id}
@@ -26,29 +27,17 @@ const Window = () => {
               width: '300px'
             }}
           >
-            <div className="title" style={{ padding: '10px', background: '#eee' }}>
-              Window {win.id}
+            <div className="title">
+              {win.title}
               <button onClick={() => closeWindow(win.id)}>X</button>
             </div>
-            <div className="content" style={{ padding: '20px' }}>
+            <div className="content">
               내용 {win.id}
             </div>
           </div>
         </Draggable>
       ))}
-      
-      <button onClick={() => openWindow(1)} style={{ position: 'fixed', bottom: 20 }}>
-        1번 창 다시 열기
-      </button>
-    </div>
-  
-    <article id={window} className={window}>
-      <section className="title">
-        <h2>{title}</h2>
-        <button className="closebtn">x</button>
-      </section>
-      <section className="content">{content}</section>
-    </article>
+    </>
   );
 };
 

@@ -134,7 +134,7 @@ const Player = () => {
   onYouTubePlayerAPIReady();
 
   return (
-    <Window title="NOW PLAYING..." content={} />
+    <Window title="NOW PLAYING..." content="" />
   )
 }
 
