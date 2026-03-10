@@ -1,5 +1,6 @@
 import React from 'react';
-import {useWindowStore} from "../store/windowManagerStore";
+import "../style.css";
+import {useWindowStore} from "../store/useWindowStore";
 
 const Menu = () => {
   const { openWindow } = useWindowStore();

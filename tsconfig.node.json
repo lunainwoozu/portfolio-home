@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true, // 다른 tsconfig에서 참조할 수 있게 함
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+  },
+  "include": ["vite.config.ts"] // 이 설정이 적용될 대상 파일
+}

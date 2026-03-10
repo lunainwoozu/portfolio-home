@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Draggable from 'react-draggable';
-import {useWindowStore} from "../store/windowManagerStore";
-
+import {useWindowStore} from "../store/useWindowStore";
+import "../style.css";
 
 const Window = () => {
   const { windows, isMobile, closeWindow, bringToFront } = useWindowStore();
@@ -17,16 +17,7 @@ const Window = () => {
           onMouseDown={() => bringToFront(win.id)}
         >
           <div
-            className={`window w${win.id} ${!win.isOpen ? 'closed' : ''}`}
-            style={{
-              zIndex: win.zIndex,
-              position: 'absolute',
-              display: win.isOpen ? 'block' : 'none',
-              border: '1px solid #000',
-              background: '#fff',
-              width: '300px'
-            }}
-          >
+            className={`window w${win.id} ${!win.isOpen ? 'closed' : ''}`}>
             <div className="title">
               {win.title}
               <button onClick={() => closeWindow(win.id)}>X</button>
